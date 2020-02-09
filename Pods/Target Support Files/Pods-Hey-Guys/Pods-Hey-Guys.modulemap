@@ -1,0 +1,6 @@
+framework module Pods_Hey_Guys {
+  umbrella header "Pods-Hey-Guys-umbrella.h"
+
+  export *
+  module * { export * }
+}

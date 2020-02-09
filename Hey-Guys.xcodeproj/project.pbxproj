@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B23C84623F0A79800B7FA17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B23C84523F0A79800B7FA17 /* GoogleService-Info.plist */; };
 		5B9E2B1F23F08BDF0028F7EE /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E2B1E23F08BDF0028F7EE /* SignInViewController.swift */; };
 		5B9E2B2223F08BFA0028F7EE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E2B2123F08BFA0028F7EE /* SignUpViewController.swift */; };
 		5BCA77E723F0771400D9718B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCA77E623F0771400D9718B /* AppDelegate.swift */; };
@@ -15,9 +16,12 @@
 		5BCA77EE23F0771400D9718B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BCA77EC23F0771400D9718B /* Main.storyboard */; };
 		5BCA77F023F0771500D9718B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BCA77EF23F0771500D9718B /* Assets.xcassets */; };
 		5BCA77F323F0771500D9718B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BCA77F123F0771500D9718B /* LaunchScreen.storyboard */; };
+		6C4C4CEA77641BC3EAFE6BFC /* Pods_Hey_Guys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C1F107E2806494CAAFF264 /* Pods_Hey_Guys.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47C1F107E2806494CAAFF264 /* Pods_Hey_Guys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hey_Guys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B23C84523F0A79800B7FA17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B9E2B1E23F08BDF0028F7EE /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		5B9E2B2123F08BFA0028F7EE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5BCA77E323F0771400D9718B /* Hey-Guys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hey-Guys.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +32,8 @@
 		5BCA77EF23F0771500D9718B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BCA77F223F0771500D9718B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BCA77F423F0771500D9718B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6290308AB3EF01BDF028AA1A /* Pods-Hey-Guys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey-Guys.release.xcconfig"; path = "Target Support Files/Pods-Hey-Guys/Pods-Hey-Guys.release.xcconfig"; sourceTree = "<group>"; };
+		DFC6501B955004205207BA20 /* Pods-Hey-Guys.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey-Guys.debug.xcconfig"; path = "Target Support Files/Pods-Hey-Guys/Pods-Hey-Guys.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C4C4CEA77641BC3EAFE6BFC /* Pods_Hey_Guys.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +53,8 @@
 			children = (
 				5BCA77E523F0771400D9718B /* Hey-Guys */,
 				5BCA77E423F0771400D9718B /* Products */,
+				E79A30A317675F62DFB69B17 /* Pods */,
+				93AB2F2A8DFF3D90DB22DFB3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +74,7 @@
 				5BCA77FA23F082B800D9718B /* Controller */,
 				5BCA77EF23F0771500D9718B /* Assets.xcassets */,
 				5BCA77F423F0771500D9718B /* Info.plist */,
+				5B23C84523F0A79800B7FA17 /* GoogleService-Info.plist */,
 			);
 			path = "Hey-Guys";
 			sourceTree = "<group>";
@@ -97,6 +107,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		93AB2F2A8DFF3D90DB22DFB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47C1F107E2806494CAAFF264 /* Pods_Hey_Guys.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E79A30A317675F62DFB69B17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFC6501B955004205207BA20 /* Pods-Hey-Guys.debug.xcconfig */,
+				6290308AB3EF01BDF028AA1A /* Pods-Hey-Guys.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BCA77F723F0771500D9718B /* Build configuration list for PBXNativeTarget "Hey-Guys" */;
 			buildPhases = (
+				34CA37BADC3C0905A039C144 /* [CP] Check Pods Manifest.lock */,
 				5BCA77DF23F0771400D9718B /* Sources */,
 				5BCA77E023F0771400D9718B /* Frameworks */,
 				5BCA77E123F0771400D9718B /* Resources */,
+				3CE8D4DA9887B2B6DBEB4BE0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,12 +185,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BCA77F323F0771500D9718B /* LaunchScreen.storyboard in Resources */,
+				5B23C84623F0A79800B7FA17 /* GoogleService-Info.plist in Resources */,
 				5BCA77F023F0771500D9718B /* Assets.xcassets in Resources */,
 				5BCA77EE23F0771400D9718B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34CA37BADC3C0905A039C144 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hey-Guys-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CE8D4DA9887B2B6DBEB4BE0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hey-Guys/Pods-Hey-Guys-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hey-Guys/Pods-Hey-Guys-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hey-Guys/Pods-Hey-Guys-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5BCA77DF23F0771400D9718B /* Sources */ = {
@@ -314,6 +386,7 @@
 		};
 		5BCA77F823F0771500D9718B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFC6501B955004205207BA20 /* Pods-Hey-Guys.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -332,6 +405,7 @@
 		};
 		5BCA77F923F0771500D9718B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6290308AB3EF01BDF028AA1A /* Pods-Hey-Guys.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
