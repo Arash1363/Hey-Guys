@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignInViewController: UIViewController {
 
@@ -31,7 +32,19 @@ class SignInViewController: UIViewController {
     
     @IBAction func continueButton(_ sender: Any) {
         
-        performSegue(withIdentifier: "goToHome", sender: self)
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            
+            if error != nil {
+                
+                print(error!)
+                
+            }else{
+                
+                self.performSegue(withIdentifier: "goToHome", sender: self)
+                
+            }
+            
+        }
         
     }
     
@@ -40,6 +53,8 @@ class SignInViewController: UIViewController {
         performSegue(withIdentifier: "goToSignUp", sender: self)
         
     }
+    
+    //TODO: Implemantion Forgot Password Button
     
     @IBAction func forgotPasswordButton(_ sender: Any) {
     }

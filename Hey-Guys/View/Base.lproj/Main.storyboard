@@ -32,11 +32,6 @@
                                     <action selector="signUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lR5-uX-rxM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Qf-mz-uqN">
-                                <rect key="frame" x="16" y="609" width="67" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Facebook"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="829-VZ-DNw">
                                 <rect key="frame" x="24" y="279" width="327" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -48,11 +43,44 @@
                                     <action selector="signInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vfV-7P-E1m"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nT-iW-nEz">
-                                <rect key="frame" x="292" y="609" width="67" height="45"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sKB-hH-hD0">
+                                <rect key="frame" x="-8" y="587" width="75" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Google"/>
-                            </button>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="TR0-pT-ttY">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Qf-mz-uqN">
+                                            <rect key="frame" x="21" y="10" width="40" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" backgroundImage="facebook"/>
+                                            <connections>
+                                                <action selector="facebookButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zNh-XI-7f5"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uPC-C2-0Dz">
+                                <rect key="frame" x="310" y="587" width="75" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="3yv-Wp-yHD">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nT-iW-nEz">
+                                            <rect key="frame" x="14" y="10" width="40" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" backgroundImage="search"/>
+                                            <connections>
+                                                <action selector="googleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9oP-rE-B8G"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -64,6 +92,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="facebookBlurView" destination="sKB-hH-hD0" id="bnW-Nd-Sck"/>
+                        <outlet property="googleBlurView" destination="uPC-C2-0Dz" id="fXE-sB-KnD"/>
                         <segue destination="83j-pP-nwg" kind="show" identifier="signIn" id="Fwp-s3-hFF"/>
                         <segue destination="LZr-M4-e5c" kind="show" identifier="signUp" id="c0k-I7-fyD"/>
                     </connections>
@@ -94,7 +124,7 @@
                                 <rect key="frame" x="55" y="306" width="266" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLr-O9-HcJ">
                                 <rect key="frame" x="128" y="580" width="122" height="33"/>
@@ -184,13 +214,13 @@
                                 <rect key="frame" x="54" y="284" width="266" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3sw-UP-fOz">
                                 <rect key="frame" x="54" y="326" width="266" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWf-4a-QRU">
                                 <rect key="frame" x="318" y="78" width="25" height="25"/>
@@ -304,16 +334,18 @@
         <image name="SignIn Button" width="327" height="52"/>
         <image name="SignUp Button" width="327" height="52"/>
         <image name="bg Blue" width="327" height="52"/>
+        <image name="facebook" width="256" height="256"/>
         <image name="message" catalog="system" width="64" height="56"/>
         <image name="message.fill" catalog="system" width="64" height="56"/>
         <image name="multiply" catalog="system" width="64" height="54"/>
         <image name="person" catalog="system" width="64" height="58"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
+        <image name="search" width="256" height="256"/>
         <image name="square.grid.2x2" catalog="system" width="64" height="56"/>
         <image name="square.grid.2x2.fill" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8Vf-4Q-VK5"/>
-        <segue reference="c0k-I7-fyD"/>
+        <segue reference="StG-MB-Lx6"/>
+        <segue reference="mpd-UI-YIV"/>
     </inferredMetricsTieBreakers>
 </document>

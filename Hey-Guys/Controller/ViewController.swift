@@ -10,9 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var facebookBlurView: UIVisualEffectView!
+    @IBOutlet weak var googleBlurView: UIVisualEffectView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+        facebookBlurView.layer.cornerRadius = 10
+        googleBlurView.layer.cornerRadius = 10
+        
     }
 
 
@@ -27,7 +34,18 @@ class ViewController: UIViewController {
         
     }
     
+    //TODO: Implemantion Login With Facebook And Google
     
+    @IBAction func facebookButton(_ sender: Any) {
+        
+        
+    }
+    
+    @IBAction func googleButton(_ sender: Any) {
+        
+        
+        
+    }
     
     
     

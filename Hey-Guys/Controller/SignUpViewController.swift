@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,7 +33,28 @@ class SignUpViewController: UIViewController {
     */
     @IBAction func continueButton(_ sender: Any) {
         
-        performSegue(withIdentifier: "goToChat", sender: self)
+        if passwordTextField.text! == confirmPasswordField.text! {
+            
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!){ (user , error) in
+                
+                if error != nil {
+                    
+                    print(error!)
+                    
+                }else{
+                    
+                    self.performSegue(withIdentifier: "goToChat", sender: self)
+                    
+                }
+
+            }
+ 
+        }else {
+            
+            confirmPasswordField.text = ""
+            confirmPasswordField.placeholder = "Invalid Password,Try Again"
+            
+        }
         
     }
     
