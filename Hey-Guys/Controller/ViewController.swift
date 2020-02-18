@@ -7,22 +7,26 @@
 //
 
 import UIKit
+import Firebase
+
 
 class ViewController: UIViewController {
 
+    //MARK: - Outlets
     @IBOutlet weak var facebookBlurView: UIVisualEffectView!
     @IBOutlet weak var googleBlurView: UIVisualEffectView!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     
         facebookBlurView.layer.cornerRadius = 10
         googleBlurView.layer.cornerRadius = 10
+       
         
     }
 
-
+    //MARK: - Action Methods
+    
     @IBAction func signInButton(_ sender: Any) {
         
         performSegue(withIdentifier: "signIn", sender: self)
@@ -34,7 +38,7 @@ class ViewController: UIViewController {
         
     }
     
-    //TODO: Implemantion Login With Facebook And Google
+    //TODO: -  Implimentation Login With Facebook And Google
     
     @IBAction func facebookButton(_ sender: Any) {
         
@@ -48,7 +52,5 @@ class ViewController: UIViewController {
     }
     
     
-    
-    
-}
 
+}//End View Controller Class

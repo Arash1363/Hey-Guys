@@ -9,8 +9,14 @@ target 'Hey-Guys' do
     pod 'Firebase'
     pod 'Firebase/Auth'
     pod 'Firebase/Database'
+    pod 'Firebase/Storage'
     pod 'ChameleonFramework'
     pod 'SVProgressHUD'
+    pod 'JGProgressHUD'
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
+    
+    
 end
 post_install do |installer|
     installer.pods_project.targets.each do |target|
