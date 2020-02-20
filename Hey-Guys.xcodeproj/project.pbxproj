@@ -136,6 +136,7 @@
 				5BCA77E023F0771400D9718B /* Frameworks */,
 				5BCA77E123F0771400D9718B /* Resources */,
 				3CE8D4DA9887B2B6DBEB4BE0 /* [CP] Embed Pods Frameworks */,
+				EE17141AB2931334CC1A2EFF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,6 +232,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hey-Guys/Pods-Hey-Guys-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE17141AB2931334CC1A2EFF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hey-Guys/Pods-Hey-Guys-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hey-Guys/Pods-Hey-Guys-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hey-Guys/Pods-Hey-Guys-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -46,12 +46,12 @@ class SignInViewController: UIViewController , UITextFieldDelegate {
     }
 
     //MARK: - Action Methods
-    @IBAction func continueButton(_ sender: Any) {
+    @IBAction func signInButton(_ sender: Any) {
         //Add Reactive Code For Off Continue Button Until Email And Password Field Fill
         //Add Code For Check Validate Inputs
         if emailTextField.text != "" && passwordTextField.text != "" {
             
-            showHud()
+            showHud(text: "Signing in...")
 
             Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             
@@ -105,7 +105,7 @@ class SignInViewController: UIViewController , UITextFieldDelegate {
         
     }
     
-    //MARK: - Implimentation Text Field Delegate
+    //MARK: - Implementation Text Field Delegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         textField.resignFirstResponder()
@@ -113,14 +113,14 @@ class SignInViewController: UIViewController , UITextFieldDelegate {
         
     }
     
-    //MARK: - Implimentation Handle Tap Gesure
+    //MARK: - Implementation Handle Tap Gesure
     @objc func handleTap () {
         
         view.endEditing(true)
         
     }
     
-    //TODO: Implimentation Validate Email Adrress
+    //TODO: Implementation Validate Email Adrress
     /*
     func validateEMail (_ emailText : String) -> Bool {
             
@@ -129,12 +129,12 @@ class SignInViewController: UIViewController , UITextFieldDelegate {
         }
     */
     
-    //MARK: - Implimentation Animate Blur View
+    //MARK: - Implementation Animate Blur View
     
     @IBAction func sendPasswordTapped(_ sender: Any) {
                
                if emailPasswordReset.text != "" {
-                   showHud()
+                showHud(text: "Sending...")
                 
                    Auth.auth().sendPasswordReset(withEmail: emailPasswordReset.text!) { (error) in
                        
@@ -204,9 +204,9 @@ class SignInViewController: UIViewController , UITextFieldDelegate {
         animateOut(desiredView: blurView)
         
     }
-    //End Implimentation Animate View
+    //End Implementation Animate View
     
-    //MARK: - Implimentation Show Alert And Action
+    //MARK: - Implementation Show Alert And Action
     func showAlert(title : String? , message : String?) {
         
         alert = UIAlertController(title: title, message: message , preferredStyle: .alert)
@@ -227,10 +227,10 @@ class SignInViewController: UIViewController , UITextFieldDelegate {
         }
     }
     
-    //MARK: - Implimentation Show And Dismiss Progress HUD
-    func showHud() {
+    //MARK: - Implementation Show And Dismiss Progress HUD
+    func showHud(text : String) {
         
-        hud.textLabel.text = "Loading..."
+        hud.textLabel.text = text
         hud.show(in: self.view, animated: true)
         
     }
@@ -240,7 +240,7 @@ class SignInViewController: UIViewController , UITextFieldDelegate {
         hud.dismiss(animated: true)
         
     }
-    //End Implimentation Progress HUD
+    //End Implementation Progress HUD
     
 }//End SignIn View Controller Class
 

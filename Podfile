@@ -15,7 +15,7 @@ target 'Hey-Guys' do
     pod 'JGProgressHUD'
     pod 'FacebookCore'
     pod 'FacebookLogin'
-    
+    pod 'GoogleSignIn'
     
 end
 post_install do |installer|

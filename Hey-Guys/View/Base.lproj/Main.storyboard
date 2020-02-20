@@ -94,6 +94,7 @@
                     <connections>
                         <outlet property="facebookBlurView" destination="sKB-hH-hD0" id="bnW-Nd-Sck"/>
                         <outlet property="googleBlurView" destination="uPC-C2-0Dz" id="fXE-sB-KnD"/>
+                        <outlet property="googleSignIn" destination="6nT-iW-nEz" id="7yn-zP-Jy8"/>
                         <segue destination="83j-pP-nwg" kind="show" identifier="signIn" id="Fwp-s3-hFF"/>
                         <segue destination="LZr-M4-e5c" kind="show" identifier="signUp" id="c0k-I7-fyD"/>
                     </connections>
@@ -173,7 +174,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="continueButton:" destination="83j-pP-nwg" eventType="touchUpInside" id="wrV-W1-gwj"/>
+                                    <action selector="signInButton:" destination="83j-pP-nwg" eventType="touchUpInside" id="wrV-W1-gwj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -279,7 +280,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f9I-fR-0BD">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password(6 Characters or More)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f9I-fR-0BD">
                                 <rect key="frame" x="54" y="336" width="266" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -308,19 +309,23 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="continueButton:" destination="LZr-M4-e5c" eventType="touchUpInside" id="DrS-0M-MMO"/>
+                                    <action selector="registerButton:" destination="LZr-M4-e5c" eventType="touchUpInside" id="DrS-0M-MMO"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iez-31-aoz">
                                 <rect key="frame" x="54" y="252" width="266" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="Acm-um-Yrp">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thv-NM-Nfv">
                                 <rect key="frame" x="230" y="154" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <state key="normal" backgroundImage="add"/>
+                                <connections>
+                                    <action selector="imagePickerButton:" destination="LZr-M4-e5c" eventType="touchUpInside" id="xmt-Kd-Uat"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="LAB-5o-oNz"/>
@@ -329,6 +334,7 @@
                     <connections>
                         <outlet property="confirmPasswordField" destination="3sw-UP-fOz" id="n2q-8z-cxP"/>
                         <outlet property="emailTextField" destination="mvr-qC-F7F" id="ROe-0Z-7Vc"/>
+                        <outlet property="nameField" destination="Iez-31-aoz" id="XnD-U3-yLK"/>
                         <outlet property="passwordTextField" destination="f9I-fR-0BD" id="J0y-bs-Lyd"/>
                         <segue destination="Ctj-Fm-v4A" kind="show" identifier="goToChat" id="StG-MB-Lx6"/>
                     </connections>
@@ -426,7 +432,7 @@
         <image name="x.circle" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8Vf-4Q-VK5"/>
-        <segue reference="c0k-I7-fyD"/>
+        <segue reference="StG-MB-Lx6"/>
+        <segue reference="mpd-UI-YIV"/>
     </inferredMetricsTieBreakers>
 </document>
