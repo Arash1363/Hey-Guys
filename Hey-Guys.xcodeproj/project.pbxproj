@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B23C84623F0A79800B7FA17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B23C84523F0A79800B7FA17 /* GoogleService-Info.plist */; };
+		5B7244CE23FF14A10042033F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7244CD23FF14A10042033F /* ChatViewController.swift */; };
 		5B9E2B1F23F08BDF0028F7EE /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E2B1E23F08BDF0028F7EE /* SignInViewController.swift */; };
 		5B9E2B2223F08BFA0028F7EE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E2B2123F08BFA0028F7EE /* SignUpViewController.swift */; };
 		5BCA77E723F0771400D9718B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCA77E623F0771400D9718B /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		47C1F107E2806494CAAFF264 /* Pods_Hey_Guys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hey_Guys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B23C84523F0A79800B7FA17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5B7244CD23FF14A10042033F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		5B9E2B1E23F08BDF0028F7EE /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		5B9E2B2123F08BFA0028F7EE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5BCA77E323F0771400D9718B /* Hey-Guys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hey-Guys.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +87,7 @@
 				5BCA77EA23F0771400D9718B /* ViewController.swift */,
 				5B9E2B1E23F08BDF0028F7EE /* SignInViewController.swift */,
 				5B9E2B2123F08BFA0028F7EE /* SignUpViewController.swift */,
+				5B7244CD23FF14A10042033F /* ChatViewController.swift */,
 				5BCA77E623F0771400D9718B /* AppDelegate.swift */,
 				5BCA77E823F0771400D9718B /* SceneDelegate.swift */,
 			);
@@ -262,6 +265,7 @@
 				5BCA77EB23F0771400D9718B /* ViewController.swift in Sources */,
 				5BCA77E723F0771400D9718B /* AppDelegate.swift in Sources */,
 				5BCA77E923F0771400D9718B /* SceneDelegate.swift in Sources */,
+				5B7244CE23FF14A10042033F /* ChatViewController.swift in Sources */,
 				5B9E2B2223F08BFA0028F7EE /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
