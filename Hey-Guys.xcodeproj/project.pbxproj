@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5B23C84623F0A79800B7FA17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B23C84523F0A79800B7FA17 /* GoogleService-Info.plist */; };
+		5B2D640B240081C3009659D8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2D640A240081C3009659D8 /* Message.swift */; };
 		5B7244CE23FF14A10042033F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7244CD23FF14A10042033F /* ChatViewController.swift */; };
+		5B80B44C2401986F003D7D9E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B80B44A2401986F003D7D9E /* CustomTableViewCell.swift */; };
+		5B80B44D2401986F003D7D9E /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B80B44B2401986F003D7D9E /* CustomTableViewCell.xib */; };
 		5B9E2B1F23F08BDF0028F7EE /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E2B1E23F08BDF0028F7EE /* SignInViewController.swift */; };
 		5B9E2B2223F08BFA0028F7EE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E2B2123F08BFA0028F7EE /* SignUpViewController.swift */; };
 		5BCA77E723F0771400D9718B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCA77E623F0771400D9718B /* AppDelegate.swift */; };
@@ -23,7 +26,10 @@
 /* Begin PBXFileReference section */
 		47C1F107E2806494CAAFF264 /* Pods_Hey_Guys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hey_Guys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B23C84523F0A79800B7FA17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5B2D640A240081C3009659D8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		5B7244CD23FF14A10042033F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		5B80B44A2401986F003D7D9E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		5B80B44B2401986F003D7D9E /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		5B9E2B1E23F08BDF0028F7EE /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		5B9E2B2123F08BFA0028F7EE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5BCA77E323F0771400D9718B /* Hey-Guys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hey-Guys.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B4801412400745B008EBD9D /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5B80B44A2401986F003D7D9E /* CustomTableViewCell.swift */,
+				5B80B44B2401986F003D7D9E /* CustomTableViewCell.xib */,
+			);
+			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
 		5BCA77DA23F0771400D9718B = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +114,7 @@
 			children = (
 				5BCA77EC23F0771400D9718B /* Main.storyboard */,
 				5BCA77F123F0771500D9718B /* LaunchScreen.storyboard */,
+				5B4801412400745B008EBD9D /* Custom Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -106,6 +122,7 @@
 		5BCA77FC23F082C800D9718B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5B2D640A240081C3009659D8 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,6 +208,7 @@
 				5BCA77F323F0771500D9718B /* LaunchScreen.storyboard in Resources */,
 				5B23C84623F0A79800B7FA17 /* GoogleService-Info.plist in Resources */,
 				5BCA77F023F0771500D9718B /* Assets.xcassets in Resources */,
+				5B80B44D2401986F003D7D9E /* CustomTableViewCell.xib in Resources */,
 				5BCA77EE23F0771400D9718B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,8 +281,10 @@
 			files = (
 				5B9E2B1F23F08BDF0028F7EE /* SignInViewController.swift in Sources */,
 				5BCA77EB23F0771400D9718B /* ViewController.swift in Sources */,
+				5B80B44C2401986F003D7D9E /* CustomTableViewCell.swift in Sources */,
 				5BCA77E723F0771400D9718B /* AppDelegate.swift in Sources */,
 				5BCA77E923F0771400D9718B /* SceneDelegate.swift in Sources */,
+				5B2D640B240081C3009659D8 /* Message.swift in Sources */,
 				5B7244CE23FF14A10042033F /* ChatViewController.swift in Sources */,
 				5B9E2B2223F08BFA0028F7EE /* SignUpViewController.swift in Sources */,
 			);
