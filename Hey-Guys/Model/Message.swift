@@ -6,11 +6,12 @@
 //  Copyright © 1398 Arash. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Message {
     
     var sender : String = ""
     var messageBody : String = ""
+    var userImage : UIImage? = nil
     
 }

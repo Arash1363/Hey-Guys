@@ -10,12 +10,8 @@ target 'Hey-Guys' do
     pod 'Firebase/Auth'
     pod 'Firebase/Database'
     pod 'Firebase/Storage'
-    pod 'ChameleonFramework'
-    pod 'SVProgressHUD'
     pod 'JGProgressHUD'
-    pod 'FacebookCore'
-    pod 'FacebookLogin'
-    pod 'GoogleSignIn'
+    pod 'GoogleSignIn' , '< 5.0.0'
     
 end
 post_install do |installer|

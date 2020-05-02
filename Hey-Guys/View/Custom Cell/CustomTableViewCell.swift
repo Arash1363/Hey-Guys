@@ -2,7 +2,7 @@
 //  CustomTableViewCell.swift
 //  Hey-Guys
 //
-//  Created by Arash on 12/3/1398 AP.
+//  Created by Arash on 12/8/1398 AP.
 //  Copyright © 1398 Arash. All rights reserved.
 //
 
@@ -10,9 +10,8 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
-    
-    @IBOutlet weak var messageView: UIView!
-    @IBOutlet weak var senderUserName: UILabel!
+    @IBOutlet weak var messageBackground: UIView!
+    @IBOutlet weak var senderName: UILabel!
     @IBOutlet weak var messageBody: UILabel!
     @IBOutlet weak var userImage: UIImageView!
     
@@ -27,5 +26,5 @@ class CustomTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }
